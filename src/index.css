@@ -1,0 +1,11 @@
+:root{
+    --color-blue: #1749B3;
+    --color-white: #fff;
+    --color-gray: #505050;
+    --color-grey: #9C99AD;
+    --color-red: #FD4646;
+}
+
+.wrapper{
+    font-family: 'Inter', 'Arial', sans-serif;
+}
