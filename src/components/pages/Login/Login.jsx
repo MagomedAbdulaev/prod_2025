@@ -88,7 +88,7 @@ function Login(props) {
                         is_link: false,
                         click: handleSubmit,
                     }} />
-                    <Button button_data={{
+                    {/* <Button button_data={{
                         title: 'Создать аккаунт',
                         background: 'var(--color-white)',
                         color: 'var(--color-blue)',
@@ -96,7 +96,7 @@ function Login(props) {
                         is_link: true,
                         path: '/register/',
                         click: () => {},
-                    }} />
+                    }} /> */}
                 </div>
             </section>
         </div>

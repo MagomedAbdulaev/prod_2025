@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client';
 import App from "./App.jsx";
 import {BrowserRouter} from "react-router-dom";
 
-const HostBackend = 'http://127.0.0.1:10000/';
+const HostBackend = 'http://prod-team-34-rqpd9aim.final.prodcontest.ru/';
 
 
 export function getCookie(name) {

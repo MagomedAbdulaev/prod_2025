@@ -20,11 +20,12 @@ function Button({
 
     // Динамические стили в зависимости от состояния hover
     const button_styles = {
-        backgroundColor: hover ? button_data.color : button_data.background,
+        background: hover ? button_data.color : button_data.background,
         color: hover ? button_data.background : button_data.color,
         padding: button_data.padding,
         borderRadius: button_data.padding,
         maxWidth: button_data.maxWidth,
+        minWidth: button_data.minWidth,
         border: `1px solid ${hover ? button_data.background : 'transparent'}`,
     };
 

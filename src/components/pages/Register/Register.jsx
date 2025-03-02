@@ -15,9 +15,9 @@ function Register(props) {
     const [userNameError, setUserNameError] = useState('');
     const [userPassword, setUserPassword] = useState('');
     const [userPasswordError, setUserPasswordError] = useState('');
-    const [userPassword2, setUserPassword2] = useState('');
-    const [userEmail, setUserEmail] = useState('');
-    const [userEmailError, setUserEmailError] = useState('');
+    // const [userPassword2, setUserPassword2] = useState('');
+    // const [userEmail, setUserEmail] = useState('');
+    // const [userEmailError, setUserEmailError] = useState('');
 
     const handleSubmit = () => {
 
@@ -38,28 +38,28 @@ function Register(props) {
             return;
         }
 
-        if(userPassword2 !== userPassword){
-            setUserPasswordError('Пароли не совпадают')
-            return;
-        }
+        // if(userPassword2 !== userPassword){
+        //     setUserPasswordError('Пароли не совпадают')
+        //     return;
+        // }
 
         setUserPasswordError('');
 
-        if(userEmail === ''){
-            setUserEmailError('Это обязательное поле');
-            return;
-        }
+        // if(userEmail === ''){
+        //     setUserEmailError('Это обязательное поле');
+        //     return;
+        // }
 
-        if(!userEmail.includes('@') && !userEmail.includes('.')){
-            setUserEmailError('Неправильный формат');
-            return;
-        }
+        // if(!userEmail.includes('@') && !userEmail.includes('.')){
+        //     setUserEmailError('Неправильный формат');
+        //     return;
+        // }
 
-        setUserEmailError('');
+        // setUserEmailError('');
 
         axios.post(`${HostBackend}auth/`, {
             login: userName,
-            email: userEmail,
+            // email: userEmail,
             password: userPassword,
         }, {
             headers: {
@@ -103,22 +103,22 @@ function Register(props) {
                     onChange: (e) => setUserPassword(e.target.value),
                     error: userPasswordError,
                 }} />
-                <Input input_data={{
+                {/* <Input input_data={{
                     title: 'Ваш пароль еще раз',
                     type: 'password',
                     placeholder: '* * * * * * * *',
                     value: userPassword2,
                     onChange: (e) => setUserPassword2(e.target.value),
                     error: userPasswordError,
-                }} />
-                <Input input_data={{
+                }} /> */}
+                {/* <Input input_data={{
                     title: 'Ваш e-mail',
                     type: 'email',
                     placeholder: 'example@gmail.com',
                     value: userEmail,
                     onChange: (e) => setUserEmail(e.target.value),
                     error: userEmailError,
-                }} />
+                }} /> */}
                 <div className="login__buttons">
                     <Button button_data={{
                         title: 'Создать аккаунт',
